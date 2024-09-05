@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <style>
+        .launch-section {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: inherit, sans-serif;
+        }
+        
+        .launch-bg {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 0 177px 10px;
+        }
+        
+        .header {
+            align-self: stretch;
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .nav-menu {
+            align-self: start;
+            display: flex;
+            margin-top: 11px;
+            align-items: center;
+            gap: 17px;
+            font-size: 22px;
+            color: #000;
+            font-weight: 400;
+        }
+        
+        .logo {
+            aspect-ratio: 1.48;
+            object-fit: contain;
+            object-position: center;
+            width: 93px;
+            align-self: stretch;
+        }
+        
+        .nav-item {
+            align-self: stretch;
+            margin: auto 0;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            color: #555;
+        }
+        
+        .nav-item-grow {
+            align-self: stretch;
+            flex-grow: 1;
+            flex-basis: auto;
+            margin: auto 0;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item-grow:hover {
+            color: #555;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 2px;
+            font-size: 17px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 2.46px;
+        }
+        
+        .user-avatar {
+            aspect-ratio: 1.39;
+            object-fit: contain;
+            object-position: center;
+            width: 103px;
+            border-radius: 466px;
+            max-width: 100%;
+        }
+        
+        .login-btn {
+            border-radius: 8px;
+            background-color: #000;
+            margin: auto 0;
+            padding: 9px 13px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .login-btn:hover {
+            background-color: #333;
+        }
+        
+        .launch-title {
+            color: #000;
+            margin-top: 77px;
+            font: 500 40px Inter, sans-serif;
+        }
+        
+        .cta-button {
+            border-radius: 30px;
+            margin-top: 38px;
+            font-size: 32px;
+            color: #000;
+            font-weight: 400;
+            padding: 17px 20px;
+            background-color: transparent;
+            border: 2px solid #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .product-highlight {
+            border-radius: 196px;
+            background-color: #100f0f;
+            width: 1090px;
+            max-width: 100%;
+            margin: 24px 0 -35px;
+            padding: 168px 70px 130px;
+            font: 600 85px Inter, sans-serif;
+            color: #fff;
+        }
+        
+        @media (max-width: 991px) {
+            .launch-bg {
+                max-width: 100%;
+                padding: 0 20px 100px 0;
+            }
+        
+            .header {
+                max-width: 100%;
+            }
+        
+            .user-actions {
+                white-space: initial;
+            }
+        
+            .login-btn {
+                white-space: initial;
+            }
+        
+            .launch-title {
+                margin-top: 40px;
+            }
+        
+            .product-highlight {
+                max-width: 100%;
+                font-size: 40px;
+                margin-bottom: 10px;
+                padding: 100px 20px 110px;
+            }
+        
+            .nav-menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .nav-item,
+            .nav-item-grow {
+                margin: 5px 0;
+            }
+        
+            .cta-button {
+                font-size: 24px;
+                padding: 12px 16px;
+            }
+        }
+        </style>
+        
+        <section class="launch-section">
+            <div class="launch-bg">
+                <header class="header">
+                    <nav class="nav-menu">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/01da012aa807eb5990da5cb2fc5afb7845cb00be0a198215d5f0a5dd2234d9ee?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="logo" alt="Google Pixel logo" />
+                        <a href="Phones.html" class="nav-item">Phones</a>
+                        <a href="earbuds.html" class="nav-item">Earbuds</a>
+                        <a href="watches.html" class="nav-item">Watches</a>
+                        <a href="contact.html" class="nav-item-grow">Contact us</a>
+                    </nav>
+                    <div class="user-actions">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcc3d04a3af8bb2ee4680cc04cfc4e7a69544fcc29188dba600f470681688a12?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="user-avatar" alt="User avatar" />
+                        <a href="/login.html">
+                        <button class="login-btn" onclick="handleLogin()">login</button>
+                      </a>
+                    </div>
+                </header>
+                <h1 class="launch-title">
+                    Launch is coming. <br/>
+                    Don't miss the magic.
+                </h1> 
+                <button class="cta-button" onclick="learnMore()">Learn more</button>
+                <center><div class="product-highlight">
+                    Google Pixel <br />
+                </div>
+            </div></center>
+        </section>
+        
+        <script>
+        function handleLogin() {
+            console.log('Login button clicked');
+        }
+        
+        function learnMore() {
+            console.log('Learn more button clicked');
+        }
+        </script> 
+      
+<style>
+    .pixel-section {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .main-title {
+      color: #000;
+      text-align: center;
+      align-self: center;
+      font: 400 49px Century Gothic, sans-serif;
+    }
+    
+    .phone-models {
+      display: flex;
+      width: 100%;
+      max-width: 1374px;
+      flex-direction: column;
+      color: #5c5959;
+      margin: 13px 0 0 19px;
+      font: 400 22px Century Gothic, sans-serif;
+    }
+    
+    .model-list {
+      display: flex;
+      width: 100%;
+      max-width: 1191px;
+      align-items: start;
+      gap: 20px 86px;
+      flex-wrap: wrap;
+    }
+    
+    .model-item {
+      display: flex;
+      margin-top: 14px;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    .model-image {
+      aspect-ratio: 1.02;
+      object-fit: contain;
+      object-position: center;
+      width: 125px;
+    }
+    
+    .model-name {
+      align-self: center;
+      margin-top: 4px;
+    }
+    
+    .divider {
+      margin-top: 24px;
+      height: 1px;
+    }
+    
+    .featured-models {
+      width: 100%;
+    }
+    
+    .featured-container {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .featured-large {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 66%;
+      margin-left: 0;
+    }
+    
+    .featured-large-content {
+      border-radius: 32px;
+      background-color: #e3eefc;
+      margin-top: 19px;
+      width: 100%;
+      padding: 3px 0 3px 80px;
+    }
+    
+    .featured-large-inner {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .featured-large-text {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 50%;
+      margin-left: 0;
+    }
+    
+    .featured-large-details {
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .featured-large-title {
+      color: #000;
+      font: 600 85px Inter, sans-serif;
+    }
+    
+    .featured-large-description {
+      display: flex;
+      margin-top: 38px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      font-family: Century Gothic, sans-serif;
+      font-weight: 400;
+      padding: 0 67px 0 10px;
+    }
+    
+    .featured-large-subtitle {
+      color: #000;
+      font-size: 23px;
+    }
+    
+    .featured-large-cta {
+      display: flex;
+      align-items: start;
+      gap: 9px;
+      font-size: 20px;
+      margin: 14px 0 0 11px;
+    }
+    
+    .buy-button {
+      border-radius: 191px;
+      background-color: #000;
+      color: #fff;
+      padding: 17px 14px;
+    }
+    
+    .price {
+      color: #000;
+      margin-top: 14px;
+    }
+    
+    .featured-large-image-wrapper {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 50%;
+      margin-left: 20px;
+    }
+    
+    .featured-large-image {
+      aspect-ratio: 0.97;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      border-radius: 19px;
+      z-index: 10;
+      flex-grow: 1;
+    }
+    
+    .featured-small {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 34%;
+      margin-left: 20px;
+    }
+    
+    .featured-small-content {
+      border-radius: 32px;
+      background-color: #f5f2ec;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      font-family: Century Gothic, sans-serif;
+      font-weight: 400;
+      margin: 0 auto;
+      padding: 43px 11px 85px 77px;
+    }
+    
+    .featured-small-title {
+      color: #000;
+      font: 600 85px Inter, sans-serif;
+    }
+    
+    .featured-small-subtitle {
+      color: #000;
+      font-size: 23px;
+      margin-top: 28px;
+    }
+    
+    .featured-small-cta {
+      display: flex;
+      margin-top: 32px;
+      gap: 10px;
+      font-size: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+    
+      .phone-models,
+      .model-list,
+      .divider,
+      .featured-models {
+        max-width: 100%;
+      }
+    
+      .featured-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .featured-large,
+      .featured-large-text,
+      .featured-large-image-wrapper,
+      .featured-small {
+        width: 100%;
+      }
+    
+      .featured-large-content {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .featured-large-details {
+        max-width: 100%;
+        margin: 36px -17px 0 0;
+      }
+    
+      .featured-large-title,
+      .featured-small-title {
+        font-size: 40px;
+      }
+    
+      .featured-large-description {
+        max-width: 100%;
+        padding-right: 20px;
+      }
+    
+      .featured-large-cta {
+        margin-left: 10px;
+      }
+    
+      .featured-large-image {
+        max-width: 100%;
+        margin: 5px -2px 0 0;
+      }
+    
+      .featured-small-content {
+        max-width: 100%;
+        margin-top: 40px;
+        padding-left: 20px;
+      }
+    
+      .featured-small-subtitle {
+        margin-left: 5px;
+      }
+    
+      .featured-small-cta {
+        margin-left: 4px;
+      }
+    }
+    </style>
+    
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic, sans-serif;
+        }
+        .pixel-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .main-title {
+            color: #000;
+            text-align: center;
+            font-size: 49px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .phone-models {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1374px;
+            color: #5c5959;
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .model-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px 86px;
+            width: 100%;
+            max-width: 1191px;
+        }
+        .model-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            min-width: 125px;
+        }
+        .model-image {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
+        }
+        .model-name {
+            margin-top: 4px;
+            text-align: center;
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 24px 0;
+        }
+        .featured-models {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1374px;
+        }
+        .featured-container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+        .featured-large {
+            flex: 2;
+            background-color: #e3eefc;
+            border-radius: 32px;
+            padding: 40px;
+            display: flex;
+        }
+        .featured-large-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .featured-large-title {
+            color: #000;
+            font-family: Inter, sans-serif;
+            font-size: 85px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .featured-large-subtitle {
+            color: #000;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        .featured-large-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .featured-large-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .featured-large-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 19px;
+        }
+        .featured-small {
+            flex: 1;
+            background-color: #f5f2ec;
+            border-radius: 32px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .featured-small-title {
+            color: #000;
+            font-family: Inter, sans-serif;
+            font-size: 85px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .featured-small-subtitle {
+            color: #000;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        .featured-small-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .buy-button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 191px;
+            padding: 17px 24px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .price {
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        @media (max-width: 991px) {
+            .main-title {
+                font-size: 40px;
+            }
+            .featured-container {
+                flex-direction: column;
+            }
+            .featured-large,
+            .featured-small {
+                width: 100%;
+            }
+            .featured-large {
+                flex-direction: column;
+            }
+            .featured-large-title,
+            .featured-small-title {
+                font-size: 40px;
+            }
+        }
+    </style>
+</section>
+     
+<div class="pixel-section">
+  <h1 class="main-heading">
+    Engineered by Google.<br />
+    For all you do.
+  </h1>
+  <p class="sub-heading">
+    Pixel devices work together seamlessly throughout your day. And with Google AI, Pixel delivers even more powerful, personalized help.
+  </p>
+  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a676266e841c3bbfa3f7da4e96133b56ffd59845a8ba11417168e9408466d01?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="pixel-image" alt="Pixel devices" />
+  <div class="camera-section">
+    <h2 class="camera-title">The Pixel Camera</h2>
+    <h3 class="camera-subtitle">Stunning photos and videos come standard.</h3>
+  </div>
+</div>
+
+<style>
+  .pixel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .main-heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .sub-heading {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 800px;
+  }
+
+  .pixel-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+
+  .camera-section {
+    margin-top: 20px;
+  }
+
+  .camera-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .camera-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 32px;
+    }
+
+    .sub-heading {
+      font-size: 18px;
+    }
+
+    .camera-title {
+      font-size: 20px;
+    }
+
+    .camera-subtitle {
+      font-size: 16px;
+    }
+  }
+</style>
+<style>
+  .catch-everyone-section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 24px 30px 47px 80px;
+  }
+  
+  @media (max-width: 991px) {
+    .content-wrapper {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .inner-content {
+    align-self: end;
+    width: 100%;
+    max-width: 1242px;
+  }
+  
+  @media (max-width: 991px) {
+    .inner-content {
+      max-width: 100%;
+    }
+  }
+  
+  .flex-container {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .flex-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 46%;
+    margin-left: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .image-column {
+      width: 100%;
+    }
+  }
+  
+  .rounded-image {
+    aspect-ratio: 0.99;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 50px;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 991px) {
+    .rounded-image {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .text-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 54%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .text-column {
+      width: 100%;
+    }
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    font-family: Century Gothic, sans-serif;
+    color: #000;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .text-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    align-self: start;
+    z-index: 10;
+  }
+  
+  .section-description {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 991px) {
+    .section-description {
+      max-width: 100%;
+    }
+  }
+  
+  .second-content {
+    align-self: center;
+    margin-left: 71px;
+    width: 100%;
+    max-width: 1156px;
+  }
+  
+  @media (max-width: 991px) {
+    .second-content {
+      max-width: 100%;
+    }
+  }
+  
+  .second-flex-container {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .second-flex-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .second-text-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 56%;
+    margin-left: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .second-text-column {
+      width: 100%;
+    }
+  }
+  
+  .second-text-content {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    font-family: Century Gothic, sans-serif;
+    color: #000;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .second-text-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .second-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    align-self: start;
+  }
+  
+  .second-section-description {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 21px;
+  }
+  
+  @media (max-width: 991px) {
+    .second-section-description {
+      max-width: 100%;
+    }
+  }
+  
+  .second-image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 44%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .second-image-column {
+      width: 100%;
+    }
+  }
+  
+  .second-rounded-image {
+    aspect-ratio: 1.39;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 50px;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 991px) {
+    .second-rounded-image {
+      max-width: 100%;
+      margin-top: 21px;
+    }
+  }
+  </style>
+  
+  <section class="catch-everyone-section">
+    <div class="content-wrapper">
+      <div class="inner-content">
+        <div class="flex-container">
+          <div class="image-column">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cd9f07d70a7f972398d239745c790f7ea5bb8924ac9065a617b3c4d7fc746e57?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="rounded-image" alt="Pixel Fold device demonstration" />
+          </div>
+          <div class="text-column">
+            <div class="text-content">
+              <h2 class="section-title">Catch everyone at their best.</h2>
+              <p class="section-description">
+                Place your Pixel Fold on a surface for hands-free group photos. Or control your camera shutter remotely using your Pixel Watch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <br><br>
+      <div class="second-content">
+        <div class="second-flex-container">
+          <div class="second-text-column">
+            <div class="second-text-content">
+              <h2 class="second-section-title">Catch everyone at their best.</h2>
+              <p class="second-section-description">
+                Best Take, Magic Eraser, and Photo Unblur use Google AI to improve photos with a few taps on your phone. With Audio Magic Eraser, your videos sound even better.
+              </p>
+            </div>
+          </div>
+          <div class="second-image-column">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d04c8098b3947adb52527668c37bd95f74b33b8abc4fdd250cb1c83923131fbc?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="second-rounded-image" alt="Pixel device showcasing AI-enhanced photo features" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .showcase-section {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .showcase-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 179px 80px 30px;
+    }
+    
+    @media (max-width: 991px) {
+      .showcase-container {
+        max-width: 100%;
+        padding: 100px 20px 0;
+      }
+    }
+    
+    .content-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: 1178px;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+      .content-wrapper {
+        max-width: 100%;
+      }
+    }
+    
+    .showcase-layout {
+      gap: 20px;
+      display: flex;
+    }
+    
+    @media (max-width: 991px) {
+      .showcase-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 64%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .image-column {
+        width: 100%;
+      }
+    }
+    
+    .showcase-image {
+      aspect-ratio: 1.42;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      border-radius: 92px;
+      flex-grow: 1;
+    }
+    
+    @media (max-width: 991px) {
+      .showcase-image {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 36%;
+      margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .text-column {
+        width: 100%;
+      }
+    }
+    
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      font-family: Century Gothic, sans-serif;
+      color: #000;
+      margin: auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .text-content {
+        margin-top: 40px;
+      }
+    }
+    
+    .showcase-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-right: 23px;
+    }
+    
+    @media (max-width: 991px) {
+      .showcase-title {
+        margin-right: 10px;
+      }
+    }
+    
+    .showcase-description {
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 14px;
+    }
+    
+    .icon-container {
+      align-self: center;
+      display: flex;
+      margin-top: 195px;
+      width: 332px;
+      max-width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    @media (max-width: 991px) {
+      .icon-container {
+        margin-top: 40px;
+      }
+    }
+    
+    .icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+    }
+    
+    .icon-1 {
+      width: 53px;
+      align-self: start;
+      margin-top: 5px;
+    }
+    
+    .icon-2,
+    .icon-3 {
+      width: 50px;
+      margin: auto 0;
+    }
+    
+    .icon-4 {
+      width: 60px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <section class="showcase-section">
+      <div class="showcase-container">
+        <div class="content-wrapper">
+          <div class="showcase-layout">
+            <div class="image-column">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94c5aad2e9810413c3366ea23ee7f7ba134bd9c63eef4ad116cb5a1d2ee4f78e?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="showcase-image" alt="Showcase of memories on various devices" />
+            </div>
+            <div class="text-column">
+              <div class="text-content">
+                <h2 class="showcase-title">Showcase your memories.</h2>
+                <p class="showcase-description">
+                  Enjoy your favorite photos throughout the day by displaying them on your Pixel tablet, phone, or watch – and even your compatible TV or Nest Hub.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="icon-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce9bea3193f93284b13f15e42627da8f75385f87d6d401d0426ce8472c2e8a55?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-1" alt="Device icon 1" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0450a41be5e1c53b43c0da65f2fe251f4f5781361e89cb6f3f4651a1206fd57c?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-2" alt="Device icon 2" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3eb0e17d4264d93b5a31056e6bf939b9300960cbec68555f159b7453ef2f9f2?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-3" alt="Device icon 3" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fce89b8ea25d6c1bb7bc80591be8e290d719814be9225015151751b4145fbb?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-4" alt="Device icon 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+</body>
+</html>

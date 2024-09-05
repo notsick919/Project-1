@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css">
+    <title>Pixel</title>
+</head>
+<body>
+    
+    <style>
+        .login-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 76px 80px 224px;
+          font: 24px Inter, sans-serif;
+        }
+        
+        @media (max-width: 991px) {
+          .login-container {
+            padding: 0 20px 100px;
+          }
+        }
+        
+        .login-form {
+          display: flex;
+          width: 430px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+        
+        .logo {
+          aspect-ratio: 1.47;
+          object-fit: contain;
+          object-position: center;
+          width: 211px;
+          align-self: center;
+          max-width: 100%;
+        }
+        
+        .login-title {
+          color: #000;
+          align-self: start;
+          margin-top: 86px;
+          font: 700 36px Century Gothic, sans-serif;
+        }
+        
+        @media (max-width: 991px) {
+          .login-title {
+            margin-top: 40px;
+          }
+        }
+        
+        .google-button {
+          border-radius: 50px;
+          background-color: #d9d9d9;
+          display: flex;
+          margin-top: 13px;
+          gap: 8px;
+          color: #000;
+          font-weight: 200;
+          padding: 8px 20px;
+        }
+        
+        .google-icon {
+          aspect-ratio: 1.49;
+          object-fit: contain;
+          object-position: center;
+          width: 52px;
+        }
+        
+        .google-text {
+          flex-grow: 1;
+          flex-basis: auto;
+          margin: auto 0;
+        }
+        
+        .input-container {
+          border-radius: 50px;
+          background-color: #d9d9d9;
+          display: flex;
+          margin-top: 17px;
+          gap: 19px;
+          color: #000;
+          font-weight: 200;
+          white-space: nowrap;
+          padding: 11px 31px;
+        }
+        
+        @media (max-width: 991px) {
+          .input-container {
+            white-space: initial;
+            padding: 0 20px;
+          }
+        }
+        
+        .input-icon {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 30px;
+        }
+        
+        .input-field {
+          flex-grow: 1;
+          flex-basis: auto;
+          margin: auto 0;
+          background: transparent;
+          border: none;
+          outline: none;
+        }
+        
+        .forgot-password {
+          color: #2a7fbc;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 1.88px;
+          text-transform: uppercase;
+          margin: 15px 22px 0 0;
+        }
+        
+        @media (max-width: 991px) {
+          .forgot-password {
+            margin-right: 10px;
+          }
+        }
+        
+        .login-button {
+          border-radius: 50px;
+          background-color: #ea4235;
+          margin-top: 22px;
+          color: #fff;
+          white-space: nowrap;
+          padding: 8px 70px;
+          font: 700 36px Century Gothic, sans-serif;
+          border: none;
+          cursor: pointer;
+        }
+        
+        @media (max-width: 991px) {
+          .login-button {
+            max-width: 100%;
+            white-space: initial;
+            padding: 0 20px;
+          }
+        }
+        
+        .secure-code-button {
+          border-radius: 50px;
+          background-color: #d9d9d9;
+          margin-top: 23px;
+          color: #010101;
+          font-weight: 200;
+          padding: 17px 70px 11px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        @media (max-width: 991px) {
+          .secure-code-button {
+            max-width: 100%;
+            padding: 0 20px;
+          }
+        }
+        
+        .signup-container {
+          align-self: center;
+          display: flex;
+          margin-top: 12px;
+          gap: 20px;
+          font-size: 13px;
+          text-transform: uppercase;
+          letter-spacing: 1.88px;
+          justify-content: space-between;
+        }
+        
+        .new-user {
+          color: #000;
+          font-weight: 200;
+        }
+        
+        .signup-link {
+          color: #428cc2;
+          font-weight: 300;
+          text-decoration: none;
+        }
+        
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        </style>
+        
+        <section class="login-container">
+          <form class="login-form">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d09401f11a5bf3aaf8337607eb57a1659fc5c9a444c9a311218ffbcb7d4c3d99?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" alt="Company Logo" class="logo" />
+            <h1 class="login-title">Login</h1>
+            <button type="button" class="google-button">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/187703c17a9e995e08177d4053879ccfeb79384c3c298f1f45473fea7f9ee1e0?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" alt="Google Icon" class="google-icon" />
+              <span class="google-text">Continue with google</span>
+            </button>
+            <div class="input-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa66040609800c72d5b6ef77dd75ad7d3ddade955b3f6bc2eb67efe8d18cac2f?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" alt="Email Icon" class="input-icon" />
+              <label for="email-input" class="visually-hidden">Email</label>
+              <input type="email" id="email-input" class="input-field" placeholder="Email" required />
+            </div>
+            <div class="input-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba023565988463c3177d5f6397f6e1410a504abf4dff55acc1c8bcf4d75483c8?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" alt="Password Icon" class="input-icon" />
+              <label for="password-input" class="visually-hidden">Password</label>
+              <input type="password" id="password-input" class="input-field" placeholder="Password" required />
+            </div>
+            <a href="#" class="forgot-password">forget password?</a>
+            <button type="submit" a href class="login-button">Login</button>  
+            <button type="button" class="secure-code-button">Login with secure code</button>
+            <div class="signup-container">
+              <span class="new-user">new user?</span>
+              <a href="#" class="signup-link">sign up?</a>
+            </div>
+          </form>
+        </section>
+        
+    
+</body>
+</html>

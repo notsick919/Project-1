@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pixel</title>
+</head>
+<body>
+      
+    <style>
+        .launch-section {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: inherit, sans-serif;
+        }
+        
+        .launch-bg {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 0 177px 10px;
+        }
+        
+        .header {
+            align-self: stretch;
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .nav-menu {
+            align-self: start;
+            display: flex;
+            margin-top: 11px;
+            align-items: center;
+            gap: 17px;
+            font-size: 22px;
+            color: #000;
+            font-weight: 400;
+        }
+        
+        .logo {
+            aspect-ratio: 1.48;
+            object-fit: contain;
+            object-position: center;
+            width: 93px;
+            align-self: stretch;
+        }
+        
+        .nav-item {
+            align-self: stretch;
+            margin: auto 0;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            color: #555;
+        }
+        
+        .nav-item-grow {
+            align-self: stretch;
+            flex-grow: 1;
+            flex-basis: auto;
+            margin: auto 0;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item-grow:hover {
+            color: #555;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: 2px;
+            font-size: 17px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 2.46px;
+        }
+        
+        .user-avatar {
+            aspect-ratio: 1.39;
+            object-fit: contain;
+            object-position: center;
+            width: 103px;
+            border-radius: 466px;
+            max-width: 100%;
+        }
+        
+        .login-btn {
+            border-radius: 8px;
+            background-color: #000;
+            margin: auto 0;
+            padding: 9px 13px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .login-btn:hover {
+            background-color: #333;
+        }
+        
+        .launch-title {
+            color: #000;
+            margin-top: 77px;
+            font: 500 40px Inter, sans-serif;
+        }
+        
+        .cta-button {
+            border-radius: 30px;
+            margin-top: 38px;
+            font-size: 32px;
+            color: #000;
+            font-weight: 400;
+            padding: 17px 20px;
+            background-color: transparent;
+            border: 2px solid #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .product-highlight {
+            border-radius: 196px;
+            background-color: #100f0f;
+            width: 1090px;
+            max-width: 100%;
+            margin: 24px 0 -35px;
+            padding: 168px 70px 130px;
+            font: 600 85px Inter, sans-serif;
+            color: #fff;
+        }
+        
+        @media (max-width: 991px) {
+            .launch-bg {
+                max-width: 100%;
+                padding: 0 20px 100px 0;
+            }
+        
+            .header {
+                max-width: 100%;
+            }
+        
+            .user-actions {
+                white-space: initial;
+            }
+        
+            .login-btn {
+                white-space: initial;
+            }
+        
+            .launch-title {
+                margin-top: 40px;
+            }
+        
+            .product-highlight {
+                max-width: 100%;
+                font-size: 40px;
+                margin-bottom: 10px;
+                padding: 100px 20px 110px;
+            }
+        
+            .nav-menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .nav-item,
+            .nav-item-grow {
+                margin: 5px 0;
+            }
+        
+            .cta-button {
+                font-size: 24px;
+                padding: 12px 16px;
+            }
+        }
+        </style>
+        
+        <section class="launch-section">
+            <div class="launch-bg">
+                <header class="header">
+                    <nav class="nav-menu">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/01da012aa807eb5990da5cb2fc5afb7845cb00be0a198215d5f0a5dd2234d9ee?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="logo" alt="Google Pixel logo" />
+                        <a href="Home.html" class="nav-item">Home</a>
+                        <a href="Phones.html" class="nav-item">Phones</a>
+                        <a href="earbuds.html" class="nav-item">Earbuds</a>
+                        <a href="contact.html" class="nav-item-grow">Contact us</a>
+                    </nav>
+                    <div class="user-actions">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcc3d04a3af8bb2ee4680cc04cfc4e7a69544fcc29188dba600f470681688a12?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="user-avatar" alt="User avatar" />
+                        <button class="login-btn" onclick="handleLogin()">login</button>
+                    </div>
+                </header>
+                <h1 class="launch-title">
+                    Watches are for more then
+                    <br>
+                    just to check time now days.
+                </h1> 
+                <br>
+                <br>
+                <h2>Pixel Watch</h2>
+                <img src="Pngs/24.jpg" alt="" width="700">
+                <br>
+                <br>
+                <h2>Pixel Watch 2</h2>
+                <img src="Pngs/11.jpg" alt="" width="700">
+                <br>
+                <br>
+                <h2>Pixel Watch 3</h2>
+                <img src="Pngs/24.jpg" alt="" width="700">
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+<div class="icon-container">
+<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce9bea3193f93284b13f15e42627da8f75385f87d6d401d0426ce8472c2e8a55?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-1" alt="Device icon 1" width="50"/>
+<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0450a41be5e1c53b43c0da65f2fe251f4f5781361e89cb6f3f4651a1206fd57c?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-2" alt="Device icon 2" width="50"/>
+<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3eb0e17d4264d93b5a31056e6bf939b9300960cbec68555f159b7453ef2f9f2?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-3" alt="Device icon 3" width="50"/>
+<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fce89b8ea25d6c1bb7bc80591be8e290d719814be9225015151751b4145fbb?apiKey=74469f3c10714f10af72f64d6cebf2c2&&apiKey=74469f3c10714f10af72f64d6cebf2c2" class="icon icon-4" alt="Device icon 4" width="50"/>
+</footer>
